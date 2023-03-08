@@ -1,0 +1,229 @@
+
+
+#contenedorTotal{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    background-color: azure;
+}
+
+
+
+h1{
+    background-color: steelblue;
+    background-size: 1000px;
+    background-image: url(https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60) ;
+    text-align: center;
+    font-family: arial;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+h2{
+    padding-top: 20px;
+    font-family: arial;
+    font-size: 25px;
+}
+
+
+h6{
+    font-size: 15px;
+    padding-top:40px;
+    padding-bottom: 40px;
+    color:white;
+}
+
+nav{
+    width:100%;
+    margin-top: -20px;
+    background-color:  darkblue;
+}
+
+aside{
+    width: 20%;
+    background-color:  gainsboro;
+    text-align: center;
+    float:right;
+    margin-bottom:auto;
+    position: absolute;
+}
+
+section{
+    width: 80%;
+    background-color: lightslategrey;
+    text-align: center;
+    height: auto;
+    float:right;
+}
+
+
+
+footer{
+    background-color: darkblue;
+    width:100%;
+    clear:both;
+    text-align: center;
+}
+
+ul{
+    display: inline;
+    margin-left: 100px;
+}
+
+ol{
+    text-align:center;
+}
+
+#listaNav li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    border-style: solid;
+    border-color:  darkblue;
+    background-color: darkblue;
+    width: 150px;
+    color: white;
+    font-family: Arial;
+}
+
+
+#listaAside li{
+    margin: 10px 10px 10px 10px;
+    color: white;
+    border-style: solid;
+    border-color: cornflowerblue;
+    background:  cornflowerblue;
+    list-style: none;
+    font-size:15px
+}
+
+
+
+
+
+
+#listaNav li p a:link{
+    color: white;
+    text-decoration: none;
+}
+
+#listaNav li p a:visited{
+    color:white;
+    text-decoration: none;
+}
+
+#listaNav li p a:hover{
+    color: cyan;
+    text-decoration: none;
+}
+
+#listaNav li p a:active{
+    color: white;
+    text-decoration: none;
+}
+
+#listaAside li p a:link{
+    color: white;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+}
+
+#listaAside li p a:visited{
+    color: white;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+}
+
+#listaAside li p a:hover{
+    color: cyan;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+}
+
+#listaAside li p a:active{
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+}
+
+
+.contenedor{
+    width: 100%;
+    margin-top: 150px;
+    padding: 3px;
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+}
+.button{
+    border: none;
+    width:100%;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link:hover{
+    color: cadetblue;
+}
+@media(min-width:768px){
+    .formulario{
+        margin: auto;
+        width: 500px;
+
+    }
+}
+
+.imagenesGenericas
+{
+    width: 400px;
+    height: 200px;
+}
+
+video{
+    width: 400px;
+    height: 400px;
+    text-align:center;
+}
+
+
+
+
+
+
+
+
