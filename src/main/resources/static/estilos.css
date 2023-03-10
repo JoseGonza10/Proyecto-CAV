@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    background-color:darkcyan;
+}
+
+header{
+    font-family: arial;
+    color: white;
+    text-align:center;
+    padding:20px;
+    height:50px;
+    background-size: 1000px;
+    background-image: url(https://images.unsplash.com/photo-1597733336794-12d05021d510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60) ;
+}
+
+nav{
+    overflow:hidden;
+    background-color:  #0C434A;
+    text-align: center;
+}
+
+aside{
+    float:left;
+    width: 20%;
+    background-color:  #176C76 ;
+    text-align: center;
+    position:absolute;
+    height:100%;
+}
+
+section{
+    width: 80%;
+    background-color: darkcyan;
+    text-align: center;
+    float:right;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #0C434A;
+  bottom:0
+}
+
+#listaNav li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    border-style: solid;
+    border-color: #094956 ;
+    background-color:  #094956;
+    border-radius: 50px;
+    width: 150px;
+    color: white;
+    font-family: Arial;
+    font-size: 12px;
+    margin-left:40px;
+
+}
+
+#listaAside li{
+    margin: 10px 10px 10px 10px;
+    color: white;
+    border-style: solid;
+    border-color: #094956;
+    background-color: #094956;
+    list-style: none;
+    font-size:15px;
+    max-height: 100%;
+    
+}
+
+#listaNav li p a:link{
+    color: white;
+    text-decoration: none;
+}
+
+#listaNav li p a:visited{
+    color:white;
+    text-decoration: none;
+}
+
+#listaNav li p a:hover{
+    color: cyan;
+    text-decoration: none;
+}
+
+#listaNav li p a:active{
+    color: white;
+    text-decoration: none;
+}
+
+#listaAside li p a:link{
+    color: white;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+}
+
+#listaAside li p a:visited{
+    color: white;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+}
+
+#listaAside li p a:hover{
+    color: cyan;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+}
+
+#listaAside li p a:active{
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5px;
+}
+
+.button{
+    border: none;
+    width:100%;
+    font-size: 12px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: cadetblue;
+}
+
