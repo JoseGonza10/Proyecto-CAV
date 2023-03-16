@@ -1,0 +1,33 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <script src="https://kit.fontawesome.com/b2b1834288.js" crossorigin="anonymous"></script>
+    <head>
+        <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
+        <title>Iniciar Sesión</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
+    </head>
+    <body class ="bodyAutenticacion">
+        <form class="formulario">
+            <h1 style="text-align:center">Iniciar Sesión</h1>
+
+
+            <div class="input-contenedor">
+                <i class="fa-solid fa-envelope icon"></i>
+                <input type="text"  placeholder="Correo electronico">
+
+            </div>       
+
+            <div class="input-contenedor">
+                <i class="fa-solid fa-key icon"></i>
+                <input type="password"  placeholder="Contraseña">
+
+            </div>
+            <a th:href="@{/bienvenidoAdmin}"><input type="button" value="Iniciar Sesión" class="button"></a>
+            <p>¿No tienes una cuenta?<a class="link" th:href="@{/register}">Regístrate</a></p>
+            <p><a class="link" th:href="@{/index}">Volver al principio</a></p>  
+        </form>
+    </body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TODO supply a title</title>
+        <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id = "contenedorTotal">
+            <header>
+                <h1>CAV(Conocimiento de Acceso Virtual)</h1>
+            </header>
+
+            <nav>
+                <ul id = "listaNav">
+                    <li>
+                        <a th:href="@{/index}"><input type="button" value="Inicio" class="button"></a>
+                    </li>
+                    <li>
+                        <a th:href="@{/cambioCuenta}"><input type="button" value="Iniciar sesión" class="button"></a>
+                        <li>
+                            <a th:href="@{/extra}"><input type="button" value="Video" class="button"></a>
+                        </li>
+                        <li>
+                            <a th:href="@{/register}"><input type="button" value="Crear cuenta" class="button"></a>
+                        </li>
+                </ul>
+            </nav>  
+            <section class = "seccionCurso">
+                <h2>Area Social </h2>
+                <h3> Antropologia: Como antropologo se estudia la diversidad y las particularidades de las 
+                    culturas humanas. Se analiza el problema de la diferencia y la diversidad cultural, 
+                    por eso se estudian los procesos de encuentro e interaccion social.</h3>
+                <div >
+                    <img src="https://www.nosequeestudiar.net/site/assets/files/1395/antropologos-investigando.400x300.jpg" class = "imagenesGenericas" >
+                </div>
+
+                <h3>Sociologia:Estudiaras las relaciones entre personas y grupos sociales, asi como la dinamica y estructura de las sociedades,
+                    los procesos de cambio en la vida cotidiana y las instituciones.</h3>           
+                <div>
+
+
+                    <img src="https://estaestucarrera.com/wp-content/uploads/2021/06/7-31-e1625046011742.jpg"   class = "imagenesGenericas" >
+                </div>
+
+                <h3> Economia: Se estudian los procesos de produccion, distribucion, comercializacion y 
+                    consumo de bienes y servicios en sociedades. Se analiza el funcionamiento de los mercados 
+                    y como interactuan los individuos y la sociedad en conjunto.</h3>
+                <div>
+
+                    <img src="https://cdn.ufidelitas.ac.cr/wp-content/uploads/2021/10/07081919/126102425_l.jpg" class = "imagenesGenericas" >
+                </div>
+            </section>
+            <aside>
+                <ul id = "listaAside">
+                    <li>
+                        <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                    </li>
+                    <li>
+                        <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                    </li>
+                    <li>
+                        <p><a th:href="@{areaSocial}">Area social </a></p>
+                    </li>
+                    <li>
+                        <p><a th:href="@{areaIt}">Area de IT</a></p>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>
