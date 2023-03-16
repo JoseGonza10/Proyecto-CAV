@@ -72,6 +72,32 @@ footer{
     
 }
 
+#tablaCrud{
+    text-align: center;
+    margin: 15px 10px 10px 50px;
+}
+
+#tablaCrud thead tr{
+    height:30px;
+    background-color: #0A363B;
+    color: white;
+}
+
+#tablaCrud tbody tr{
+    background-color: #094956;
+    color: white;
+}
+
+#tablaCrud tbody tr td{
+    height:30px;
+    padding-right:50px;
+    padding-left:50px;
+}
+
+.opcionTabla{
+  background-color: #0A363B;  
+}
+
 #listaNav li p a:link{
     color: white;
     text-decoration: none;
@@ -124,6 +150,7 @@ footer{
     padding: 15px 20px;
     border-radius: 50px;
     cursor: pointer;
+    background-color:  #176C76;
 }
 
 .button:hover{

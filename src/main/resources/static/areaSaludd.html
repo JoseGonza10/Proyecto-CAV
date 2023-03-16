@@ -1,39 +1,51 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Inicio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href ="styles.css"  rel = "stylesheet" type = "text/css"/>
+        <link href ="estilos.css"  rel = "stylesheet" type = "text/css"/>
+        <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
+        
+
     </head>
     <body>
-        <div id = "contenedorTotal">
+        <div id = cuerpo>
             <header>
-                <h1>CAV(Conocimiento de Acceso Virtual)</h1>
+                <h1>CAV</h1>
             </header>
-
             <nav>
                 <ul id = "listaNav">
                     <li>
-                        <p><a href="index2.html">Inicio</a></p>
+                        <input type="button" value="Inicio" class="button" onclick="location.href='index.html';">
                     </li>
                     <li>
-                        <p><a href="login.html">Credenciales</a></p>
+                        <input type="button" value="Iniciar sesión" class="button" onclick="location.href='login.html';">
+                    <li>
+                        <input type="button" value="Video" class="button" onclick="location.href='extra.html';">
                     </li>
                     <li>
-                        <p><a href="register.html">Crear cuenta</a></p>
+                        <input type="button" value="Crear cuenta" class="button" onclick="location.href='crearcuenta.html';">
                     </li>
-                    <li>
-                        <p><a href="extra.html">video promocional</a></p>
-                    </li>
-
                 </ul>
-            </nav>  
-            <section>
+            </nav> 
+            <aside>
+                <ul id = "listaAside">
+                    <li>
+                        <p><a href="areaIngenieriass.html">Area de ingenierias</a></p>
+                    </li>
+                    <li>
+                        <p><a href="areaSaludd.html">Area de salud </a></p>
+                    </li>
+                    <li>
+                        <p><a href="areaSocial.html">Area social </a></p>
+                    </li>
+                    <li>
+                        <p><a href="areaIt.html">Area de IT</a></p>
+                    </li>
+                </ul>
+            </aside>
+             <section>
                 <h2>Area de Salud </h2>
                 <h3> Medicina: Es la carrera de Salud por excelencia, donde adquiriras conocimientos 
                     para diagnosticar y tratar pacientes con diferentes enfermedades y padecimientos.</h3>
@@ -52,35 +64,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                 <h3>Enfermeria: va de la mano con la Medicina, esta carrera te preparara para cuidar 
                     y atender pacientes, administrando los tratamientos prescritos por el medico.</h3>
-
-
                 <div>
                     <img src="http://grinama.com/wp-content/uploads/2021/08/373442-PBC7VB-714v2-scaled.jpg"  class = "imagenesGenericas" >
                 </div>
-
+ 
             </section>
-            <aside>
-                <h2>
-                    Areas de enfoque 
-                </h2>
-                <ul id = "listaAside">
-                    <li>
-                        <p><a href="areaIngenierias.html">Area de ingenierias</a></p>
-                    </li>
-                    <li>
-                        <p><a href="areaSalud.html">Area de salud </a></p>
-                    </li>
-                    <li>
-                        <p><a href="areaSocial.html">Area social </a></p>
-                    </li>
-                    <li>
-                        <p><a href="areaIt.html">Area de IT</a></p>
-                    </li>
-                </ul>
-            </aside>
-            <footer>
-                <h6>Contacto: <a href = "https://github.com/JoseGonza10/laboratorioN2.git">repositorio de github</a></h6>
-            </footer>
+
         </div>
+        <footer>
+        </footer>
     </body>
 </html>
