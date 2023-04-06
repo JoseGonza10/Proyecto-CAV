@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
+                <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
+                    </head>
+                    <body>
+                        <form>
+
+                        </form>
+                        <div id = cuerpo>
+                            <header>
+                                <h1>CAV</h1>
+                            </header>
+                            <nav>
+                                <ul id = "listaNav">
+                                    <li>
+                                        <a th:href="@{/bienvenidoAdmin}"><input type="button" value="Regresar" class="button"></a>
+                                    </li>
+                                </ul>
+                            </nav>         
+                            <section>
+                                <form th:action = "@{}"
+                                      method="post"
+                                      th:objet="${curso}">
+                                    <input type="hidden" name="id_curso" th:field="*{id_curso}"/>
+                                    <label for="descripcion"> Descripción:</label>
+                                    <input type="text" name="descripcion" th:field="*{descripcion}"/>
+                                    <br>
+                                    <label for="dia"> Dia de sesión:</label>
+                                    <input type="text" name="dia" th:field="*{dia}"/>
+                                    <br>
+                                    <label for="activo">Estado:</label>
+                                    <input type="text" name="activo" th:field="*{activo}"/>
+                                    <br>
+                                    <label for="hora_inicial">Hora de comienzo:</label>
+                                    <input type="text" name="hora_inicial" th:field="*{hora_inicial}"/>
+                                    <br>
+                                    <label for="hora_final">Hora de fin:</label>
+                                    <input type="text" name="hora_final" th:field="*{hora_final}"/>
+                                    <br>
+                                    <input type="submit" name="guardar" value="Guardar información"/>
+                                </form>
+                            </section>
+                        </div>
+                        <footer>
+                        </footer>
+                    </body>
+                    </html>

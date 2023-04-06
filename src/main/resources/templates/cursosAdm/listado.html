@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Curso</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
+                <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
+                    </head>
+                    <body>
+                        <div id = cuerpo>
+                            <header>
+                                <h1>CAV</h1>
+                            </header>
+                            <nav>
+                                <ul id = "listaNav">
+                                    <li>
+                                        <a th:href="@{/bienvenidoAdmin}"><input type="button" value="Inicio" class="button"></a>
+                                    </li>
+                                    <li>
+                                        <a th:href="@{/cambioCuenta}"><input type="button" value="Cambio de cuenta" class="button"></a>
+                                        <li>
+                                            <a th:href="@{/index}"><input type="button" value="Cerrar sesión" class="button"></a></input>
+                                        </li>
+                                </ul>
+                            </nav> 
+                            <aside>
+                                <ul id = "listaAside">
+                                    <li>
+                                        <p><a th:href="@{/gestionEstudiantes}">Gestión de estudiantes</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a th:href="@{/gestionProfesores}">Gestión de profesores</a></p>
+                                    </li>
+                                    <li>
+                                        <p><a th:href="@{/gestionCursos}">Gestión de cursos</p></a>
+                                    </li>
+                                    <li>
+                                        <p><a th:href="@{/certificacion}">Certificaciones</a></p>
+                                    </li>
+                                    <li>
+                                        <p>Mi cuenta</a></p>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <section>
+                                <div th if="${cursos != null and !cursos.empty}">
+                                    <table class ="tablaCrud">
+                                        <thead>
+                                            <tr>
+                                                <th>Descripcion</th>
+                                                <th>Dia</th>
+                                                <th>Hora inicial</th>
+                                                <th>Hora final</th>
+                                                <th>Activo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="curso : ${cursos}">
+                                                <td th:text="${curso.descripcion}"></td>
+                                                <td th:text="${curso.dia}"></td>
+                                                <td th:text="${curso.hora_inicial}"></td>
+                                                <td th:text="${curso.hora_final}"></td>
+                                                <td th:text="${curso.activo}"></td>
+                                                <td class = "opcionTabla">Editar</td>
+                                                <td class = "opcionTabla">Eliminar</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div th:if="${cursos == null or cursos.empty}">
+                                    No hay cursos para mostrar
+                                </div>
+                            </section>
+
+                        </div>
+                        <footer>
+                        </footer>
+                    </body>
+                    </html>

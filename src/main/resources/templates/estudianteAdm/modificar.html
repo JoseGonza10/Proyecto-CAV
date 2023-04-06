@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
+                <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
+                    </head>
+                    <body>
+                        <form>
+
+                        </form>
+                        <div id = cuerpo>
+                            <header>
+                                <h1>CAV</h1>
+                            </header>
+                            <nav>
+                                <ul id = "listaNav">
+                                    <li>
+                                        <a th:href="@{/bienvenidoAdmin}"><input type="button" value="Regresar" class="button"></a>
+                                    </li>
+                                </ul>
+                            </nav>         
+                            <section>
+                                <form th:action = "@{}"
+                                      method="post"
+                                      th:objet="${estudiante}">
+                                    <input type="hidden" name="id_estudiante" th:field="*{id_estudiante}"/>
+                                    <label for="nombre"> Nombre:</label>
+                                    <input type="text" name="nombre" th:field="*{nombre}"/>
+                                    <br>
+                                    <label for="apellidoA"> Primer apellido:</label>
+                                    <input type="text" name="apellidoA" th:field="*{apellidoA}"/>
+                                    <br>
+                                    <label for="apellidoB"> Segundo apellido:</label>
+                                    <input type="text" name="apellidoB" th:field="*{apellidoB}"/>
+                                    <br>
+                                    <label for="telefono"> Telefono:</label>
+                                    <input type="text" name="telefono" th:field="*{telefono}"/>
+                                    <br>
+                                    <label for="correo">Correo electrónico:</label>
+                                    <input type="text" name="correo" th:field="*{correo}"/>
+                                    <br>
+                                    <label for="clave">Contraseña:</label>
+                                    <input type="text" name="clave" th:field="*{clave}"/>
+                                    <br>
+                                    <input type="submit" name="guardar" value="Guardar información"/>
+                                </form>
+
+
+                            </section>
+                        </div>
+                        <footer>
+                        </footer>
+                    </body>
+                    </html>
