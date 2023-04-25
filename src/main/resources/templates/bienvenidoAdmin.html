@@ -26,27 +26,9 @@
                                         </li>
                                 </ul>
                             </nav> 
-                            <aside>
-                                <ul id = "listaAside">
-                                    <li>
-                                        <p><a th:href="@{/gestionEstudiantes}">Gestión de estudiantes</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a th:href="@{/gestionProfesores}">Gestión de profesores</a></p>
-                                    </li>
-                                    <li>
-                                        <p><a th:href="@{/gestionCursos}">Gestión de cursos</p></a>
-                                    </li>
-                                    <li>
-                                        <p><a th:href="@{/certificacion}">Certificaciones</a></p>
-                                    </li>
-                                    <li>
-                                        <p>Mi cuenta</a></p>
-                                    </li>
-                                </ul>
-                            </aside>
+                            <aside th:replace="layout/plantillaAdmin :: aside"/>
                                 <section>
-                                    <h1>Bienvenido Admin!</h1>
+                                    <h1>Bienvenido Admin</h1>
                                     <img src="https://www.pngmart.com/files/21/Admin-Profile-PNG.png"width="600" height="600">
 
                                 </section>

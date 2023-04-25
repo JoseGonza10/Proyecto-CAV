@@ -1,0 +1,117 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+
+        <!---Aside de estudiantes--->
+        <aside th:fragment="asideEstudiante">
+            <ul  id = "listaAside">
+                <li>
+                    <p><a th:href="@{/estudianteAdm/nuevo}">Crear estudiante</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/estudianteAdm/listado}">Gestión de estudiantes</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/profesorAdm/listado}">Gestión de profesores</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/cursosAdm/listado}">Gestión de cursos</p></a>
+                </li>
+                <li>
+                    <p><a th:href="@{/bienvenidoAdmin}">Regresar</p></a>
+                </li>
+            </ul>
+        </aside>
+
+        <section th:fragment="listadoAlumnos">
+            <div th if="${estudiantes != null and !estudiantes.empty}">
+                <table class ="tablaCrud">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Primer apellido</th>
+                            <th>Segundo apellido</th>
+                            <th>Telefono</th>
+                            <th>Correo</th>
+                            <th>Contraseña</th>
+                            <th>Configuración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="estudiante : ${estudiantes}">
+                            <td th:text="${estudiante.nombre}"></td>
+                            <td th:text="${estudiante.apellidoA}"></td>
+                            <td th:text="${estudiante.apellidoB}"></td>
+                            <td th:text="${estudiante.telefono}"></td>
+                            <td th:text="${estudiante.correo}"></td>
+                            <td th:text="${estudiante.clave}"></td>
+                            <td class ="opcionTabla"><a th:href="@{/estudianteAdm/modificar/} + ${estudiante.id_estudiante}">Editar</a></td>
+                            <td class = "opcionTabla"><a th:href="@{/estudianteAdm/eliminar/} + ${estudiante.id_estudiante}">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${estudiantes == null or estudiantes.empty}">
+                No hay estudiantes para mostrar
+            </div>    
+        </section>
+
+        <!---Crear estudiantes---->
+        <section th:fragment="nuevoAlumno">
+            <form th:action = "@{/estudianteAdm/guardar}"
+                  method="post"
+                  th:objet="${estudiante}">
+                <label for="nombre"> Nombre:</label>
+                <input type="text" name="nombre" th:field="*{estudiante.nombre}"/>
+                <br>
+                    <label for="apellidoA"> Primer apellido:</label>
+                    <input type="text" name="apellidoA" th:field="*{estudiante.apellidoA}"/>
+                    <br>
+                        <label for="apellidoB"> Segundo apellido:</label>
+                        <input type="text" name="apellidoB" th:field="*{estudiante.apellidoB}"/>
+                        <br>
+                            <label for="telefono"> Telefono:</label>
+                            <input type="text" name="telefono" th:field="*{estudiante.telefono}"/>
+                            <br>
+                                <label for="correo">Correo electrónico:</label>
+                                <input type="text" name="correo" th:field="*{estudiante.correo}"/>
+                                <br>
+                                    <label for="clave">Contraseña:</label>
+                                    <input type="text" name="clave" th:field="*{estudiante.clave}"/>
+                                    <br>
+                                        <input type="submit" name="guardar" value="Guardar información"/>
+                                        </form>
+                                        </section>
+
+                                        <!---Modificar estudiantes---->
+                                        <section th:fragment="modificarAlumno">
+                                            <form th:action = "@{/estudianteAdm/guardar}"
+                                                  method="post"
+                                                  th:objet="${estudiante}">
+                                                <input type="hidden" name="id_estudiante" th:field="*{estudiante.id_estudiante}"/>
+                                                <label for="nombre"> Nombre:</label>
+                                                <input type="text" name="nombre" th:field="*{estudiante.nombre}"/>
+                                                <br>
+                                                    <label for="apellidoA"> Primer apellido:</label>
+                                                    <input type="text" name="apellidoA" th:field="*{estudiante.apellidoA}"/>
+                                                    <br>
+                                                        <label for="apellidoB"> Segundo apellido:</label>
+                                                        <input type="text" name="apellidoB" th:field="*{estudiante.apellidoB}"/>
+                                                        <br>
+                                                            <label for="telefono"> Telefono:</label>
+                                                            <input type="text" name="telefono" th:field="*{estudiante.telefono}"/>
+                                                            <br>
+                                                                <label for="correo">Correo electrónico:</label>
+                                                                <input type="text" name="correo" th:field="*{estudiante.correo}"/>
+                                                                <br>
+                                                                    <label for="clave">Contraseña:</label>
+                                                                    <input type="text" name="clave" th:field="*{estudiante.clave}"/>
+                                                                    <br>
+                                                                        <input type="submit" name="guardar" value="Guardar información"/>
+                                                                        </form>
+                                                                        </section>
+                                                                        </body>
+                                                                        </html>

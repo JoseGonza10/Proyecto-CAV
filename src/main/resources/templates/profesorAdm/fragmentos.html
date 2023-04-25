@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <!---Aside de profesores--->
+        <aside th:fragment="asideProfesor">
+            <ul  id = "listaAside">
+                <li>
+                    <p><a th:href="@{/profesorAdm/nuevo}">Crear profesor</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/estudianteAdm/listado}">Gestión de estudiantes</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/profesorAdm/listado}">Gestión de profesores</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/cursosAdm/listado}">Gestión de cursos</p></a>
+                </li>
+                <li>
+                    <p><a th:href="@{/bienvenidoAdmin}">Regresar</p></a>
+                </li>
+            </ul>
+        </aside>
+
+
+        <!--Listado de profesores-->
+        <section th:fragment="listadoProfesor">
+            <div th if="${profesores != null and !profesores.empty}">
+                <table class ="tablaCrud">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Primer apellido</th>
+                            <th>Segundo apellido</th>
+                            <th>Telefono</th>
+                            <th>Correo</th>
+                            <th>Contraseña</th>
+                            <th>Configuración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="profesor : ${profesores}">
+                            <td th:text="${profesor.nombre}"></td>
+                            <td th:text="${profesor.apellidoA}"></td>
+                            <td th:text="${profesor.apellidoB}"></td>
+                            <td th:text="${profesor.telefono}"></td>
+                            <td th:text="${profesor.correo}"></td>
+                            <td th:text="${profesor.clave}"></td>
+                            <td class ="opcionTabla"><a th:href="@{/profesorAdm/modificar/} + ${profesor.id_profesor}">Editar</a></td>
+                            <td class = "opcionTabla"><a th:href="@{/profesorAdm/eliminar/} + ${profesor.id_profesor}">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${profesores == null or profesores.empty}">
+                No hay profesores en el sistema
+            </div>
+        </section>
+
+        <!--Crear profesor-->
+        <section th:fragment="nuevoProfesor">
+            <form th:action = "@{/profesorAdm/guardar}"
+                  method="post"
+                  th:objet="${profesor}">
+                <label for="nombre"> Nombre:</label>
+                <input type="text" name="nombre" th:field="*{profesor.nombre}"/>
+                <br>
+                <label for="apellidoA"> Primer apellido:</label>
+                <input type="text" name="apellidoA" th:field="*{profesor.apellidoA}"/>
+                <br>
+                <label for="apellidoB"> Segundo apellido:</label>
+                <input type="text" name="apellidoB" th:field="*{profesor.apellidoB}"/>
+                <br>
+                <label for="telefono"> Telefono:</label>
+                <input type="text" name="telefono" th:field="*{profesor.telefono}"/>
+                <br>
+                <label for="correo">Correo electrónico:</label>
+                <input type="text" name="correo" th:field="*{profesor.correo}"/>
+                <br>
+                <label for="clave">Contraseña:</label>
+                <input type="text" name="clave" th:field="*{profesor.clave}"/>
+                <br>
+                <input type="submit" name="guardar" value="Guardar información"/>
+            </form>
+        </section>
+
+        <!--Modificar profesor-->
+        <section th:fragment="modificarProfesor">
+            <form th:action = "@{/profesorAdm/guardar}"
+                  method="post"
+                  th:objet="${profesor}">
+                <input type="hidden" name="id_profesor" th:field="*{profesor.id_profesor}"/>
+                <label for="nombre"> Nombre:</label>
+                <input type="text" name="nombre" th:field="*{profesor.nombre}"/>
+                <br>
+                <label for="apellidoA"> Primer apellido:</label>
+                <input type="text" name="apellidoA" th:field="*{profesor.apellidoA}"/>
+                <br>
+                <label for="apellidoB"> Segundo apellido:</label>
+                <input type="text" name="apellidoB" th:field="*{profesor.apellidoB}"/>
+                <br>
+                <label for="telefono"> Telefono:</label>
+                <input type="text" name="telefono" th:field="*{profesor.telefono}"/>
+                <br>
+                <label for="correo">Correo electrónico:</label>
+                <input type="text" name="correo" th:field="*{profesor.correo}"/>
+                <br>
+                <label for="clave">Contraseña:</label>
+                <input type="text" name="clave" th:field="*{profesor.clave}"/>
+                <br>
+                <input type="submit" name="guardar" value="Guardar información"/>
+            </form>
+        </section>
+
+    </body>
+</html>

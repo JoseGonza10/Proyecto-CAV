@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+
+        <!---Aside de cursos--->
+        <aside th:fragment="asideCurso">
+            <ul  id = "listaAside">
+                <li>
+                    <p><a th:href="@{/cursosAdm/nuevo}">Crear curso</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/estudianteAdm/listado}">Gestión de estudiantes</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/profesorAdm/listado}">Gestión de profesores</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/cursosAdm/listado}">Gestión de cursos</p></a>
+                </li>
+                <li>
+                    <p><a th:href="@{/bienvenidoAdmin}">Regresar</p></a>
+                </li>
+            </ul>
+        </aside>
+
+        <!--Listar todos los cursos-->
+        <section th:fragment="listadoCursos">
+            <div th if="${cursos != null and !cursos.empty}">
+                <table class ="tablaCrud">
+                    <thead>
+                        <tr>
+                            <th>Descripcion</th>
+                            <th>Dia</th>
+                            <th>Hora inicial</th>
+                            <th>Hora final</th>
+                            <th>Activo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="curso : ${cursos}">
+                            <td th:text="${curso.descripcion}"></td>
+                            <td th:text="${curso.dia}"></td>
+                            <td th:text="${curso.hora_inicial}"></td>
+                            <td th:text="${curso.hora_final}"></td>
+                            <td th:text="${curso.activo}"></td>
+                            <td class = "opcionTabla"><a th:href="@{/cursosAdm/modificar/} + ${curso.id_curso}">Editar</a></td>
+                            <td class = "opcionTabla"><a th:href="@{/cursosAdm/eliminar/} + ${curso.id_curso}">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${cursos == null or cursos.empty}">
+                No hay cursos para mostrar
+            </div>
+        </section>
+
+        <!--Crear curso-->
+        <section th:fragment="nuevoCurso">
+            <form th:action = "@{/cursosAdm/guardar}"
+                  method="post"
+                  th:objet="${curso}">
+                <label for="descripcion"> Descripción:</label>
+                <input type="text" name="descripcion" th:field="*{curso.descripcion}"/>
+                <br>
+                <label for="dia"> Dia de sesión:</label>
+                <input type="text" name="dia" th:field="*{curso.dia}"/>
+                <br>
+                <label for="activo">Estado:</label>
+                <input type="text" name="activo" th:field="*{curso.activo}"/>
+                <br>
+                <label for="hora_inicial">Hora de comienzo:</label>
+                <input type="text" name="hora_inicial" th:field="*{curso.hora_inicial}"/>
+                <br>
+                <label for="hora_final">Hora de fin:</label>
+                <input type="text" name="hora_final" th:field="*{curso.hora_final}"/>
+                <br>
+                <input type="submit" name="guardar" value="Guardar información"/>
+            </form>
+        </section>
+
+        <!--Modificar curso-->
+        <section th:fragment="modificarCurso">
+            <form th:action = "@{/cursosAdm/guardar}"
+                  method="post"
+                  th:objet="${curso}">
+                <input type="hidden" name="id_curso" th:field="*{curso.id_curso}"/>
+                <label for="descripcion"> Descripción:</label>
+                <input type="text" name="descripcion" th:field="*{curso.descripcion}"/>
+                <br>
+                <label for="dia"> Dia de sesión:</label>
+                <input type="text" name="dia" th:field="*{curso.dia}"/>
+                <br>
+                <label for="activo">Estado:</label>
+                <input type="text" name="activo" th:field="*{curso.activo}"/>
+                <br>
+                <label for="hora_inicial">Hora de comienzo:</label>
+                <input type="text" name="hora_inicial" th:field="*{curso.hora_inicial}"/>
+                <br>
+                <label for="hora_final">Hora de fin:</label>
+                <input type="text" name="hora_final" th:field="*{curso.hora_final}"/>
+                <br>
+                <input type="submit" name="guardar" value="Guardar información"/>
+            </form>
+        </section>
+
+    </body>
+</html>
