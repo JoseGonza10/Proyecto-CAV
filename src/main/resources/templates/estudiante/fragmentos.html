@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <!---Aside de catalogo--->
+        <aside th:fragment="asideCatalogo">
+            <ul  id = "listaAside">
+                <li>
+                    <p><a th:href="@{/estudianteAdm/nuevo}">Mis cursos</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{/estudiante/bienvenidoEstudiante}">Regresar</p></a>
+                </li>
+            </ul>
+        </aside>
+        
+        <!--Listado de cursos disponibles-->
+        <section th:fragment="catalogo">
+            <div th if="${cursos != null and !cursos.empty}">
+                <table class ="tablaCrud">
+                    <thead>
+                        <tr>
+                            <th>Descripcion</th>
+                            <th>Dia</th>
+                            <th>Hora inicial</th>
+                            <th>Hora final</th>
+                            <th>Activo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="curso : ${cursos}">
+                            <td th:text="${curso.descripcion}"></td>
+                            <td th:text="${curso.dia}"></td>
+                            <td th:text="${curso.hora_inicial}"></td>
+                            <td th:text="${curso.hora_final}"></td>
+                            <td th:text="${curso.activo}"></td>
+                            <td class = "opcionTablaEditar"><a class ="textLink" th:href="@{/cursosAdm/modificar/} + ${curso.id_curso}">Matricular</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${cursos == null or cursos.empty}">
+                No hay cursos disponibles para matricula
+            </div>
+        </section>
+        
+    </body>
+</html>

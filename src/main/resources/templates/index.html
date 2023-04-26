@@ -1,64 +1,47 @@
-<html lang ="en" xmlns:th="http://www.thymeleaf.org"
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
-    <head>
+    <head th:replace="~{layout/plantilla :: head}">
         <title>Inicio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
-        <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
     </head>
     <body>
         <div id = cuerpo>
-            <header>
-                <h1>CAV</h1>
-            </header>
-            <nav>
-                <ul id = "listaNav">
-                    <li>
-                        <a th:href="@{/index}"><input type="button" value="Inicio" class="button"></a>
-                    </li>
-                    <li>
-                        <a th:href="@{/cambioCuenta}"><input type="button" value="Iniciar sesión" class="button"></a>
-                    <li>
-                         <a th:href="@{/extra}"><input type="button" value="Video" class="button"></a>
-                    </li>
-                    <li>
-                        <a th:href="@{/register}"><input type="button" value="Crear cuenta" class="button"></a>
-                    </li>
-                </ul>
-            </nav> 
+            <header th:replace="~{layout/plantilla :: header}"/>
+            <nav th:replace="~{layout/plantilla :: navIndex}"/>
             <aside>
                 <ul id = "listaAside">
                     <li>
-                        <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                        <a th:href="@{/areas/areaIngenierias}" class="textLink"><p th:text="#{index.aIngenierias}">Area de ingenierias</p></a>
                     </li>
                     <li>
-                        <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                        <a th:href="@{/areas/areaSalud}" class="textLink"><p th:text="#{index.aSalud}">Area de salud</p></a>
                     </li>
                     <li>
-                        <p><a th:href="@{areaSocial}">Area social </a></p>
+                        <a th:href="@{/areas/areaSocial}" class="textLink"><p th:text="#{index.aSocial}">Area social</p></a>
                     </li>
                     <li>
-                        <p><a th:href="@{areaIt}">Area de IT</a></p>
+                        <a th:href="@{/areas/areaIt}" class="textLink"><p th:text="#{index.aIT}">Area de IT</p></a>
                     </li>
                 </ul>
             </aside>
-             <section>
-                <h2>Sobre nosotros</h2>
-                <p>
-                    CAV(Conocimiento de acceso) es una plataforma educativa virtual que se compromete a proveer una metodologia alternativa al<br>
-                    aprendizaje de manera que sea accesible desde cualquier lugar a cualquier momento y que este en consideración de las condiciones de usuario<br>
-                    que le impidan presentarse de manera presencial en instalaciones universitarias. La plataforma esta diseñada como una biblioteca de cursos<br>
-                    educativos que los usuarios podran buscar y adquirir de manera digital, cada uno de ellos contando con su profesor y asignaciones respectivas. <br>
-                </p>
 
-                <h2>Nuestra oferta</h2>
-                <p>
-                    Dentro de nuestra plataforma educativa, nos disponemos a ofrecer a nuestro usuarios un amplio catalogo de cursos disponibles para cualquier persona<br>
-                    que desee llevar sus estudios de manera alternativa a la presencialidad.
-            </section>
-        </div>
-        <footer>
-        </footer>
-    </body>
-</html>
+            <section>
+                <div class="contenedorSeccionS">
+                    <h2 th:text="#{index.nosotrosTitular}">Sobre nosotros</h2>
+                    <p th:text="#{index.nosotros}">
+                        CAV(Conocimiento de acceso) es una plataforma educativa virtual que se compromete a proveer una metodologia alternativa al<br>
+                            aprendizaje de manera que sea accesible desde cualquier lugar a cualquier momento y que este en consideración de las condiciones de usuario<br>
+                                que le impidan presentarse de manera presencial en instalaciones universitarias. La plataforma esta diseñada como una biblioteca de cursos<br>
+                                    educativos que los usuarios podran buscar y adquirir de manera digital, cada uno de ellos contando con su profesor y asignaciones respectivas. <br>
+                                        </p>
+
+                                        <h2 th:text="#{index.ofertaTitular}">Nuestra oferta</h2>
+                                        <p th:text="#{index.oferta}">
+                                            Dentro de nuestra plataforma educativa, nos disponemos a ofrecer a nuestro usuarios un amplio catalogo de cursos disponibles para cualquier persona<br>
+                                                que desee llevar sus estudios de manera alternativa a la presencialidad.
+                                                </section>
+
+                                                </div>
+                                                <footer th:replace="~{layout/plantilla :: footer}"/>
+                                                </body>
+                                                </html>

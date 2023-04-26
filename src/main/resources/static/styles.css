@@ -1,6 +1,6 @@
 
 
-#contenedorTotal{
+.contenedorTotal{
     min-height: 100%;
     position: relative;
 }

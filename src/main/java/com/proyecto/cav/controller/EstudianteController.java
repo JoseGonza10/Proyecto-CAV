@@ -2,6 +2,7 @@
 package com.proyecto.cav.controller;
 
 import com.proyecto.cav.domain.Estudiante;
+import com.proyecto.cav.service.CursoService;
 import com.proyecto.cav.service.EstudianteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,10 @@ public class EstudianteController {
     
     @Autowired
     private EstudianteService estudianteService;
+    
+    @Autowired
+    private CursoService cursoService;
+    
     
     @GetMapping("/estudianteAdm/listado")
     public String conseguirEstudiantes(Model model){
@@ -50,6 +55,14 @@ public class EstudianteController {
         estudianteService.delete(estudiante);
         return "redirect:/estudianteAdm/listado";
     }
+    
+    @GetMapping("/estudiante/catalogo")
+    public String conseguirCatalogo(Model modelo){
+        modelo.addAttribute("cursos",cursoService.getCursos());
+        return "/estudiante/catalogo";
+    }
+    
+    
 
     
 

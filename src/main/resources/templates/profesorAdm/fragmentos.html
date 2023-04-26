@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
     </head>
     <body>
 
@@ -56,8 +51,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <td th:text="${profesor.telefono}"></td>
                             <td th:text="${profesor.correo}"></td>
                             <td th:text="${profesor.clave}"></td>
-                            <td class ="opcionTabla"><a th:href="@{/profesorAdm/modificar/} + ${profesor.id_profesor}">Editar</a></td>
-                            <td class = "opcionTabla"><a th:href="@{/profesorAdm/eliminar/} + ${profesor.id_profesor}">Eliminar</a></td>
+                            <td class ="opcionTablaEditar"><a class ="textLink" th:href="@{/profesorAdm/modificar/} + ${profesor.id_profesor}">Editar</a></td>
+                            <td class = "opcionTablaEliminar"><a class ="textLink" th:href="@{/profesorAdm/eliminar/} + ${profesor.id_profesor}">Eliminar</a></td>
                         </tr>
                     </tbody>
                 </table>

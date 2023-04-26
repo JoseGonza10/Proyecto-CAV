@@ -1,17 +1,83 @@
-<html lang ="en" xmlns:th="http://www.thymeleaf.org"
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
     <head th:fragment="head">
         <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
+                <script src="https://kit.fontawesome.com/b2b1834288.js" crossorigin="anonymous"></script>
                 <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
                     </head>
                     <body>
                         <header th:fragment="header" class="header">
-                             <h1>CAV</h1>
+                            <h1>CAV</h1>
                         </header>
+                        
+                        <aside th:fragment="aside">
+                        <ul  id = "listaAside">
+                            <li>
+                                <p><a th:href="@{/estudianteAdm/listado}">Gestión de estudiantes</a></p>
+                            </li>
+                            <li>
+                                <p><a th:href="@{/profesorAdm/listado}">Gestión de profesores</a></p>
+                            </li>
+                            <li>
+                                <p><a th:href="@{/cursosAdm/listado}">Gestión de cursos</p></a>
+                            </li>
+                            <li>
+                                <p><a th:href="@{/certificacion}">Certificaciones</a></p>
+                            </li>
+                            <li>
+                                <p>Mi cuenta</a></p>
+                            </li>
+                        </ul>
+                    </aside>
+                        
+                        <nav th:fragment="navIndex">
+                            <ul id = "listaNav">
+                                <li>
+                                    <a th:href="@{/index}"><input type="button" value="Inicio" class="button"/></a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/cambioCuenta}"><input type="button" value="Iniciar sesión" class="button"></a>
+                                    <li>
+                                        <a th:href="@{/extra}"><input type="button" value="Video" class="button"></a>
+                                    </li>
+                                    <li>
+                                        <a th:href="@{/register}"><input type="button" value="Crear cuenta" class="button"></a>
+                                    </li>
+                            </ul>
+                        </nav>
+                        
+                        
+
+                    <nav th:fragment="navAdmin">
+                        <ul id = "listaNav">
+                            <li>
+                                <a th:href="@{/cambioCuenta}"><input type="button" value="Cambio de cuenta" class="button"></a>
+                            </li>
+                            <li>
+                                <a th:href="@{/index}"><input type="button" value="Cerrar sesión" class="button"></input></a>
+                            </li>                          
+                        </ul>
+                    </nav>
+
+                        <nav th:fragment="navEstudiante">
+                            <ul id = "listaNav">
+                                <li>
+                                    <a th:href="@{/bienvenidoEstudiante}"><input type="button" value="Inicio" class="button"></a>
+                                </li>
+                                <li>
+                                    <a th:href="@{/index}"><input type="button" value="Cerrar sesión" class="button"></a></input>
+                                </li>
+                            </ul>
+                        </nav> 
+
+
                         <footer th:fragment="footer" class="footer">
-                            <p>Derechos reservados por la Asociación Fidelitas</p>
+                            <p th:text="#{plantilla.derechos}">Derechos reservados por la Asociación Fidelitas</p>
+                            <p><a class="textLink" th:href="@{/(lang=es)}">ES</a></p>
+                            <p><a class="textLink" th:href="@{/(lang=en)}">EN</a></p>
                         </footer>
                     </body>
                     </html>

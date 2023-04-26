@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
         <title>Inicio</title>
     </head>
@@ -46,8 +47,8 @@
                             <td th:text="${curso.hora_inicial}"></td>
                             <td th:text="${curso.hora_final}"></td>
                             <td th:text="${curso.activo}"></td>
-                            <td class = "opcionTabla"><a th:href="@{/cursosAdm/modificar/} + ${curso.id_curso}">Editar</a></td>
-                            <td class = "opcionTabla"><a th:href="@{/cursosAdm/eliminar/} + ${curso.id_curso}">Eliminar</a></td>
+                            <td class = "opcionTablaEditar"><a class ="textLink" th:href="@{/cursosAdm/modificar/} + ${curso.id_curso}">Editar</a></td>
+                            <td class = "opcionTablaEliminar"><a class ="textLink" th:href="@{/cursosAdm/eliminar/} + ${curso.id_curso}">Eliminar</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -65,46 +66,66 @@
                 <label for="descripcion"> Descripción:</label>
                 <input type="text" name="descripcion" th:field="*{curso.descripcion}"/>
                 <br>
-                <label for="dia"> Dia de sesión:</label>
-                <input type="text" name="dia" th:field="*{curso.dia}"/>
-                <br>
-                <label for="activo">Estado:</label>
-                <input type="text" name="activo" th:field="*{curso.activo}"/>
-                <br>
-                <label for="hora_inicial">Hora de comienzo:</label>
-                <input type="text" name="hora_inicial" th:field="*{curso.hora_inicial}"/>
-                <br>
-                <label for="hora_final">Hora de fin:</label>
-                <input type="text" name="hora_final" th:field="*{curso.hora_final}"/>
-                <br>
-                <input type="submit" name="guardar" value="Guardar información"/>
-            </form>
-        </section>
+                    <label for="dia"> Dia de sesión:</label>
+                    <input type="text" name="dia" th:field="*{curso.dia}"/>
+                    <br>
+                        <label for="activo">Estado:</label>
+                        <input type="text" name="activo" th:field="*{curso.activo}"/>
+                        <br>
+                            <label for="hora_inicial">Hora de comienzo:</label>
+                            <input type="text" name="hora_inicial" th:field="*{curso.hora_inicial}"/>
+                            <br>
+                                <label for="hora_final">Hora de fin:</label>
+                                <input type="text" name="hora_final" th:field="*{curso.hora_final}"/>
+                                <br>
+                                    <input type="submit" name="guardar" value="Guardar información"/>
+                                    </form>
+                                    </section>
 
-        <!--Modificar curso-->
-        <section th:fragment="modificarCurso">
-            <form th:action = "@{/cursosAdm/guardar}"
-                  method="post"
-                  th:objet="${curso}">
-                <input type="hidden" name="id_curso" th:field="*{curso.id_curso}"/>
-                <label for="descripcion"> Descripción:</label>
-                <input type="text" name="descripcion" th:field="*{curso.descripcion}"/>
-                <br>
-                <label for="dia"> Dia de sesión:</label>
-                <input type="text" name="dia" th:field="*{curso.dia}"/>
-                <br>
-                <label for="activo">Estado:</label>
-                <input type="text" name="activo" th:field="*{curso.activo}"/>
-                <br>
-                <label for="hora_inicial">Hora de comienzo:</label>
-                <input type="text" name="hora_inicial" th:field="*{curso.hora_inicial}"/>
-                <br>
-                <label for="hora_final">Hora de fin:</label>
-                <input type="text" name="hora_final" th:field="*{curso.hora_final}"/>
-                <br>
-                <input type="submit" name="guardar" value="Guardar información"/>
-            </form>
-        </section>
+                                    <!--Modificar curso-->
+                                    <section th:fragment="modificarCurso" class="sectionCompleta">
+                                        <form th:action = "@{/cursosAdm/guardar}"
+                                              method="post"
+                                              th:objet="${curso}"
+                                              style="text-align: center">
+                                                <input type="hidden" name="id_curso" th:field="*{curso.id_curso}"/>
+                                                <label for="descripcion"> Descripción:</label>
+                                                <div class="inputFormulario">
+                                            <input type="text" name="descripcion" th:field="*{curso.descripcion}"/>
+                                            <br>
+                                                </div>
+                                                <label for="dia"> Dia de sesión:</label>
+                                                
+                                                <div class="inputFormulario">
+                                                <input type="text" name="dia" th:field="*{curso.dia}"/>
+                                                <br>
+                                                </div>
+                                                    <label for="activo">Estado:</label>
+                                                    <div class="inputFormulario">
+                                                    <input type="text" name="activo" th:field="*{curso.activo}"/>
+                                                    <br>
+                                                    </div>
+                                                        <label for="hora_inicial">Hora de comienzo:</label>
+                                                        <div class="inputFormulario">
+                                                        <input type="text" name="hora_inicial" th:field="*{curso.hora_inicial}"/>
+                                                        <br>
+                                                        </div>
+                                                            <label for="hora_final">Hora de fin:</label>
+                                                            <div class="inputFormulario">
+                                                            <input type="text" name="hora_final" th:field="*{curso.hora_final}"/>
+                                                            <br>
+                                                            </div>
+                                                                <input type="submit" name="guardar" value="Guardar información" class="button" style="width:200px"/>
+                                                                </form>
+                                                                </section>
 
-    </body>
-</html>
+                                                                <nav th:fragment="navEditor">
+                                                                    <ul class="listaNavEditor">
+                                                                        <li>
+                                                                            <a th:href="@{/cursosAdm/listado}"><input type="button" value="Regresar" class="button"></a>
+                                                                        </li>                       
+                                                                    </ul>
+                                                                </nav>
+
+                                                                </body>
+                                                                </html>

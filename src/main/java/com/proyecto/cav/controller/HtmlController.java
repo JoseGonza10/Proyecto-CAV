@@ -64,23 +64,23 @@ public class HtmlController {
         return "extra";
     } 
     
-    @GetMapping("/areaIngenierias")
+    @GetMapping("/areas/areaIngenierias")
     public String areaIngenieriasViewer(){
-        return "areaIngenierias";
+        return "/areas/areaIngenierias";
     }
     
-    @GetMapping("/areaSocial")
+    @GetMapping("/areas/areaSocial")
     public String areaSocialViewer(){
-        return "areaSocial";
+        return "/areas/areaSocial";
     }
     
-    @GetMapping("/areaSalud")
+    @GetMapping("/areas/areaSalud")
     public String areaSaludViewer(){
-        return "areaSalud";
+        return "/areas/areaSalud";
     }
     
-    @GetMapping("/areaIt")
+    @GetMapping("/areas/areaIt")
     public String areaItViewer(){
-        return "areaIt";
+        return "/areas/areaIt";
     }
 }

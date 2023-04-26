@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <div class = "contenedorTotal">
+            <header th:replace="~{layout/plantilla :: header}"/>
+            <nav th:replace="~{layout/plantilla :: navIndex}"/>
+            <aside th:replace="~{areas/fragmentos :: asideIngenieria}"/>
+            <section th:replace="~{areas/fragmentos :: sectionIngenieria}"/>
+            <footer th:replace="~{layout/plantilla :: footer}"/>
+        </div>
+    </body>
+</html>

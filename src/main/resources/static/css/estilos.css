@@ -5,7 +5,7 @@ body{
 }
 
 .bodyAutenticacion{
-   background-color:#A9CECE;
+    background-color:#A9CECE;
 }
 header{
     font-family: arial;
@@ -29,7 +29,7 @@ aside{
     background-color:  #176C76 ;
     text-align: center;
     position:absolute;
-    height:100%;
+    height:100%
 }
 
 section{
@@ -39,19 +39,46 @@ section{
     float:right;
 }
 
+.sectionCompleta{
+    width:100%;
+    padding-top:50px;
+    padding-bottom:100px;
+    text-align: center;
+    background-color:#A9CECE;
+}
+
+.inputFormulario{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 60%;
+    padding-left:20%;
+}
+
+.contenedorSeccionS{
+    text-align: center;
+    width:70%;
+    padding-left:200px
+}
+
 .seccionCurso{
     font-size: 10px;
 }
 
 footer{
-  position: fixed;
-  width: 100%;
-  height: 5%;
-  padding: 10px;
-  text-align: center;
-  background-color: #0C434A;
-  bottom:0
+    text-align: center;
+    position:fixed;
+    width: 100%;
+    background-color: #0C434A;
+    bottom:0;
+    left:0;
 }
+
+footer p{
+    color: white;
+    display: inline-block;
+}
+
+
 
 #listaNav li{
     list-style: none;
@@ -66,7 +93,20 @@ footer{
     font-family: Arial;
     font-size: 12px;
     margin-left:40px;
+}
 
+.listaNavEditor li{
+    list-style: none;
+    text-align: center;
+    border-style: solid;
+    border-color: #094956 ;
+    background-color:  #094956;
+    border-radius: 50px;
+    width: 150px;
+    color: white;
+    margin-left:650px;
+    font-family: Arial;
+    font-size: 12px;  
 }
 
 #listaAside li{
@@ -78,7 +118,8 @@ footer{
     list-style: none;
     font-size:15px;
     max-height: 100%;
-    
+    margin-left:-10%
+
 }
 
 .tablaCrud{
@@ -104,8 +145,12 @@ footer{
     padding-left:50px;
 }
 
-.opcionTabla{
-  background-color: #0A363B;  
+.opcionTablaEditar{
+    background-color: greenyellow;
+}
+
+.opcionTablaEliminar{
+    background-color: red;
 }
 
 #listaNav li p a:link{
@@ -153,6 +198,26 @@ footer{
     margin: 5px 5px 5px 5px;
 }
 
+.textLink:link{
+    color: white;
+    text-decoration: none;
+}
+
+.textLink:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.textLink:hover{
+    color: cyan;
+    text-decoration: none;
+}
+
+.textLink:active{
+    color: white;
+    text-decoration: none;
+}
+
 .button{
     border: none;
     width:100%;
@@ -164,7 +229,7 @@ footer{
 }
 
 #buttonCertificacion{
-   width:200px;
+    width:200px;
 }
 
 .button:hover{
@@ -186,7 +251,10 @@ input[type="password"]{
 }
 
 .input-contenedor{
+    margin-top: 15px;
     margin-bottom: 15px;
+    width:90%;
+    text-align:center;
 }
 .icon{
     min-width: 50px;
@@ -203,9 +271,7 @@ input[type="password"]{
 .button:hover{
     background: cadetblue;
 }
-p{
-    text-align: center;
-}
+
 
 .link{
     text-decoration: none;
@@ -236,13 +302,12 @@ video{
 }
 
 .cuadrado {
-  width: 150px;           /* Ancho de 150 píxeles */
-  height: 150px;          /* Alto de 150 píxeles */
-  background: #094956;        /* Fondo de color rojo */
-  border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
+    width: 150px;           /* Ancho de 150 píxeles */
+    height: 150px;          /* Alto de 150 píxeles */
+    background: #094956;        /* Fondo de color rojo */
+    border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
 
 }
-
 
 .cuerpo-form{
     background-color:#386DBF;

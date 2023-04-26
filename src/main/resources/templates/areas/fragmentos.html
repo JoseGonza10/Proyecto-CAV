@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <!--Asides-->
+        <!--Aside ingenierias-->
+        <aside th:fragment="asideIngenieria" style="height:1000px">
+            <ul id = "listaAside">
+                <li>
+                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                </li>
+            </ul>
+        </aside>
+
+        <!--Aside It-->
+        <aside th:fragment="asideIt" style="height:1300px">
+            <ul id = "listaAside">
+                <li>
+                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                </li>
+            </ul>
+        </aside>
+
+        <!--aside Salud-->
+        <aside th:fragment="asideSalud" style="height:950px">
+            <ul id = "listaAside">
+                <li>
+                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                </li>
+            </ul>
+        </aside>
+
+        <!--Aside Social-->
+        <aside th:fragment="asideSocial" style="height:950px">
+            <ul id = "listaAside">
+                <li>
+                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                </li>
+                <li>
+                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                </li>
+            </ul>
+        </aside>
+
+        <!--Sections-->
+        <section th:fragment="sectionIngenieria">
+            <div class = "contenedorSeccionS">
+                <h2>Area de Ingenierias </h2>
+                <p><strong>Ingenieria Industrial:</strong> Forma profesionales que formulan soluciones innovadoras, 
+                    seleccionan modelos, diseñan, crean y resuelven oportunidades de optimización de recursos 
+                    en cualquier proceso y sistema profesional.</p>
+                <div >
+                    <img src="https://uvg.edu.mx/blog/wp-content/uploads/2016/07/UVG_6-materias-de-ingenieria-industrial-que-debes-conocer.jpg" class = "imagenesGenericas" >
+                </div>           
+
+                <p><strong>Ingenieria Civil:</strong> Es la disciplina de la ingeniería que emplea conocimientos de cálculo, mecánica, hidráulica y física para encargarse del diseño, construcción 
+                    y mantenimiento de las infraestructuras emplazadas en el entorno, incluyendo carreteras, ferrocarriles, 
+                    puentes, canales, presas, puertos, aeropuertos, diques y otras construcciones relacionadas.</p>
+                <div>
+                    <img src="https://www.ulatina.ac.cr/sites/default/files/2022-02/01-Blog-UL-14.png" class = "imagenesGenericas" >
+                </div>                
+
+                <p><strong>Ingenieria en Sistemas:</strong> Un ingeniero en sistemas labora en los campos del diseño y la programación de sistemas operativos en las empresas,
+                    así como el mantenimiento de estos y otros softwares utilizados para el mejor desempeño de la institución.</p>
+                <div>
+                    <img src="https://www.aauniv.com/s/blog/wp-content/uploads/2021/12/que-hace-un-ingeniero-de-sistemas-1280x720.jpg" class = "imagenesGenericas" >
+                </div>
+            </div>
+        </section>
+
+        <section th:fragment="sectionIt">
+            <div class = "contenedorSeccionS">
+                <h2>Areas de IT</h2>
+                <p><strong>Videojuegos y Seguridad Informática:</strong> Costa Rica está en medio de una corriente de desarrollo de videojuegos, lo que hace que los estudiantes que se especialicen en esta área
+                    tengan un amplio mercado laboral. Además, lo complementarán con la Seguridad Informática,
+                    lo que asegura que desarrollarán juegos aptos para menores de edad que están en línea.</p>
+                <div>
+                    <img src="https://s3.us-east-1.amazonaws.com/nidocolectivo-s3-production/blog/seguridad-inform%C3%A1tica/Deber%C3%ADas-utilizar-la-seguridad-inform%C3%A1tica-en-tu-marca-para-la-creaci%C3%B3n-de-contenidos.jpg" class = "imagenesGenericas">
+
+                </div>
+
+                <p><strong>Bases de Datos:</strong> En el mundo se produce mucha información en la web, la cual es leíble y analizable. Esta concentración le dará al estudiante 
+                    las habilidades necesarias para tomar estos datos, almacenar y tratar grandes volúmenes de información
+                    y con ellos analizarlos y potenciar a la empresa en donde se desarrolle.</p>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtlC2SpyH5zbvZ_XGzMy3T0gNFOAB4hY9mZw&usqp=CAU" class = "imagenesGenericas">
+
+                </div>
+
+                <p><strong>Infraestructura</strong>: Es la concentración “más física” ya que todas las tendencias actuales no podrían trabajar si no existieran equipos que soporten los datos de la nube. 
+                    Los estudiantes podrán gestionar e instalar equipos potentes para las empresas que así lo necesiten.</p>
+                <div>
+                    <img src="https://3.bp.blogspot.com/_L4CYxHzwFbw/TPnaamKRrPI/AAAAAAAAAd0/CJIVvDsbk0U/s1600/Dise%25C3%25B1o%2By%2Bconstruccion%2Bde%2Bredes.jpg" class = "imagenesGenericas">
+
+                </div>
+
+
+
+                <p><strong>Ciencias Empresariales:</strong> Con esta concentración los estudiantes podrán obtener los fundamentos contables para una buena administración
+                    y puedan emprender su empresa con grandes habilidades y mayor seguridad.</p>
+                <div>
+                    <img src="https://b2325059.smushcdn.com/2325059/wp-content/uploads/2018/01/tecnologia-big-data-finanzas-empresariales_31965-1241.jpg?lossy=1&strip=1&webp=1" class = "imagenesGenericas">
+                </div>
+            </div>
+        </section>
+
+        <section th:fragment="sectionSalud">
+            <div class="contenedorSeccionS">
+                <h2>Area de Salud </h2>
+                <p><strong>Medicina:</strong> Es la carrera de Salud por excelencia, donde adquiriras conocimientos 
+                    para diagnosticar y tratar pacientes con diferentes enfermedades y padecimientos.<p>
+                        <div >
+
+                            <img src="https://www.ulatina.ac.cr/sites/default/files/inline-images/01-Blog-UL-17.png" class = "imagenesGenericas" >
+                        </div>
+
+
+                        <p><strong>Ciencias de la Salud:</strong> aquí aprenderás diversos temas relacionados con la Salud 
+                            que te permitirán trabajar cerca de otros profesionales de la asistencia sanitaria.<p>
+                                <div>
+
+                                    <img src="https://www.aauniv.com/s/blog/wp-content/uploads/2022/03/ciencias-de-la-salud-funcion.jpg"   class = "imagenesGenericas" >
+                                </div>
+
+                                <p><strong>Enfermeria:</strong> va de la mano con la Medicina, esta carrera te preparara para cuidar 
+                                    y atender pacientes, administrando los tratamientos prescritos por el medico.<p>
+                                        <div>
+                                            <img src="http://grinama.com/wp-content/uploads/2021/08/373442-PBC7VB-714v2-scaled.jpg"  class = "imagenesGenericas" >
+                                        </div>
+                                        </div>
+                                        </section>
+        
+        <section th:fragment="sectionSocial">
+                <div class = "contenedorSeccionS">
+                    <h2>Area Social </h2>
+                    <p><strong>Antropología:</strong> Como antropologo se estudia la diversidad y las particularidades de las 
+                        culturas humanas. Se analiza el problema de la diferencia y la diversidad cultural, 
+                        por eso se estudian los procesos de encuentro e interaccion social.</p>
+                    <div >
+                        <img src="https://www.nosequeestudiar.net/site/assets/files/1395/antropologos-investigando.400x300.jpg" class = "imagenesGenericas" >
+                    </div>
+
+                    <p><strong>Sociología:</strong>Estudiaras las relaciones entre personas y grupos sociales, asi como la dinamica y estructura de las sociedades,
+                        los procesos de cambio en la vida cotidiana y las instituciones.</p>           
+                    <div>
+
+
+                        <img src="https://estaestucarrera.com/wp-content/uploads/2021/06/7-31-e1625046011742.jpg"   class = "imagenesGenericas" >
+                    </div>
+
+                    <p><strong>Economía:</strong> Se estudian los procesos de produccion, distribucion, comercializacion y 
+                        consumo de bienes y servicios en sociedades. Se analiza el funcionamiento de los mercados 
+                        y como interactuan los individuos y la sociedad en conjunto.</p>
+                    <div>
+
+                        <img src="https://cdn.ufidelitas.ac.cr/wp-content/uploads/2021/10/07081919/126102425_l.jpg" class = "imagenesGenericas" >
+                    </div>
+                </div>
+            </section>
+
+                                        </body>
+                                        </html>

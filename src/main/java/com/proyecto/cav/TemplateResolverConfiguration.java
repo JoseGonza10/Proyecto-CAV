@@ -24,7 +24,7 @@ public class TemplateResolverConfiguration {
     @Bean
     public SpringResourceTemplateResolver TemplatesResolver_1(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("classpath:/templates/estudianteAdm");
+        templateResolver.setPrefix("classpath:/templates/estudianteAdm/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
@@ -36,11 +36,11 @@ public class TemplateResolverConfiguration {
     @Bean
     public SpringResourceTemplateResolver TemplatesResolver_2(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("classpath:/templates/profesorAdm");
+        templateResolver.setPrefix("classpath:/templates/profesorAdm/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
-        templateResolver.setOrder(1);
+        templateResolver.setOrder(2);
         templateResolver.setCheckExistence(true);
         return templateResolver;
     }
@@ -48,11 +48,35 @@ public class TemplateResolverConfiguration {
     @Bean
     public SpringResourceTemplateResolver TemplatesResolver_3(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("classpath:/templates/cursosAdm");
+        templateResolver.setPrefix("classpath:/templates/cursosAdm/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
-        templateResolver.setOrder(1);
+        templateResolver.setOrder(3);
+        templateResolver.setCheckExistence(true);
+        return templateResolver;
+    }
+    
+    @Bean
+    public SpringResourceTemplateResolver TemplatesResolver_4(){
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setPrefix("classpath:/templates/areas/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setOrder(4);
+        templateResolver.setCheckExistence(true);
+        return templateResolver;
+    }
+    
+    @Bean
+    public SpringResourceTemplateResolver TemplatesResolver_5(){
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setPrefix("classpath:/templates/estudiante/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setOrder(5);
         templateResolver.setCheckExistence(true);
         return templateResolver;
     }

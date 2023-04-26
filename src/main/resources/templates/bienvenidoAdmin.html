@@ -16,9 +16,6 @@
                                 <nav>
                                 <ul id = "listaNav">
                                     <li>
-                                        <a th:href="@{/bienvenidoAdmin}"><input type="button" value="Inicio" class="button"></a>
-                                    </li>
-                                    <li>
                                         <a th:href="@{/cambioCuenta}"><input type="button" value="Cambio de cuenta" class="button"></a>
                                     </li>
                                         <li>
@@ -26,14 +23,13 @@
                                         </li>
                                 </ul>
                             </nav> 
-                            <aside th:replace="layout/plantillaAdmin :: aside"/>
+                            <aside th:replace="layout/plantilla :: aside"/>
                                 <section>
                                     <h1>Bienvenido Admin</h1>
                                     <img src="https://www.pngmart.com/files/21/Admin-Profile-PNG.png"width="600" height="600">
 
                                 </section>
                             </div>
-                            <footer>
-                            </footer>
+                            <footer th:replace="~{layout/plantilla :: footer}"/>
                         </body>
                         </html>

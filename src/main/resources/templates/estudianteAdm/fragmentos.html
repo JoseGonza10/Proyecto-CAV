@@ -1,4 +1,5 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
         <title>Inicio</title>
@@ -37,7 +38,6 @@
                             <th>Telefono</th>
                             <th>Correo</th>
                             <th>Contraseña</th>
-                            <th>Configuración</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,8 +48,8 @@
                             <td th:text="${estudiante.telefono}"></td>
                             <td th:text="${estudiante.correo}"></td>
                             <td th:text="${estudiante.clave}"></td>
-                            <td class ="opcionTabla"><a th:href="@{/estudianteAdm/modificar/} + ${estudiante.id_estudiante}">Editar</a></td>
-                            <td class = "opcionTabla"><a th:href="@{/estudianteAdm/eliminar/} + ${estudiante.id_estudiante}">Eliminar</a></td>
+                            <td class ="opcionTablaEditar"><a class ="textLink" th:href="@{/estudianteAdm/modificar/} + ${estudiante.id_estudiante}">Editar</a></td>
+                            <td class = "opcionTablaEliminar"><a class ="textLink" th:href="@{/estudianteAdm/eliminar/} + ${estudiante.id_estudiante}">Eliminar</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -67,6 +67,7 @@
                 <label for="nombre"> Nombre:</label>
                 <input type="text" name="nombre" th:field="*{estudiante.nombre}"/>
                 <br>
+
                     <label for="apellidoA"> Primer apellido:</label>
                     <input type="text" name="apellidoA" th:field="*{estudiante.apellidoA}"/>
                     <br>
@@ -87,31 +88,53 @@
                                         </section>
 
                                         <!---Modificar estudiantes---->
-                                        <section th:fragment="modificarAlumno">
+                                        <section th:fragment="modificarAlumno" class="sectionCompleta">
                                             <form th:action = "@{/estudianteAdm/guardar}"
                                                   method="post"
-                                                  th:objet="${estudiante}">
+                                                  th:objet="${estudiante}"
+                                                  style="text-align: center">
                                                 <input type="hidden" name="id_estudiante" th:field="*{estudiante.id_estudiante}"/>
                                                 <label for="nombre"> Nombre:</label>
-                                                <input type="text" name="nombre" th:field="*{estudiante.nombre}"/>
-                                                <br>
-                                                    <label for="apellidoA"> Primer apellido:</label>
+                                                <div class="inputFormulario">
+                                                    <input type="text" name="nombre" th:field="*{estudiante.nombre}"/>
+                                                    <br>
+                                                </div>
+                                                <label for="apellidoA"> Primer apellido:</label>
+                                                <div class="inputFormulario">
                                                     <input type="text" name="apellidoA" th:field="*{estudiante.apellidoA}"/>
                                                     <br>
-                                                        <label for="apellidoB"> Segundo apellido:</label>
-                                                        <input type="text" name="apellidoB" th:field="*{estudiante.apellidoB}"/>
-                                                        <br>
-                                                            <label for="telefono"> Telefono:</label>
-                                                            <input type="text" name="telefono" th:field="*{estudiante.telefono}"/>
-                                                            <br>
-                                                                <label for="correo">Correo electrónico:</label>
-                                                                <input type="text" name="correo" th:field="*{estudiante.correo}"/>
-                                                                <br>
-                                                                    <label for="clave">Contraseña:</label>
-                                                                    <input type="text" name="clave" th:field="*{estudiante.clave}"/>
-                                                                    <br>
-                                                                        <input type="submit" name="guardar" value="Guardar información"/>
-                                                                        </form>
-                                                                        </section>
-                                                                        </body>
-                                                                        </html>
+                                                </div>
+
+                                                <label for="apellidoB"> Segundo apellido:</label>
+                                                <div class="inputFormulario">
+                                                    <input type="text" name="apellidoB" th:field="*{estudiante.apellidoB}"/>
+                                                    <br>
+                                                </div>
+                                                <label for="telefono"> Telefono:</label>
+                                                <div class="inputFormulario">
+                                                    <input type="text" name="telefono" th:field="*{estudiante.telefono}"/>
+                                                    <br>
+                                                </div>
+                                                <label for="correo">Correo electrónico:</label>
+                                                <div class="inputFormulario">
+                                                    <input type="text" name="correo" th:field="*{estudiante.correo}"/>
+                                                    <br>
+                                                </div>
+                                                <label for="clave">Contraseña:</label>
+                                                <div class="inputFormulario">
+                                                    <input type="text" name="clave" th:field="*{estudiante.clave}"/>
+                                                    <br>
+                                                </div>
+                                                <input type="submit" name="guardar" value="Guardar información" class="button" style="width:200px"/>
+                                            </form>
+                                        </section>
+                                        </body>
+                                        </html>
+
+                                        <nav th:fragment="navEditor">
+                                            <ul class="listaNavEditor">
+                                                <li>
+                                                     <a th:href="@{/estudianteAdm/listado}"><input type="button" value="Regresar" class="button"></a>
+                                                </li>                       
+                                            </ul>
+                                        </nav>

@@ -5,10 +5,11 @@
         <title>Inicio</title>
     </head>
     <body>
-        <div id = "cuerpo">
-            <header th:replace="~{layout/plantilla :: header}"/>
-            <nav th:replace="~{cursosAdm/fragmentos :: navEditor}"/>        
-            <section id="nuevoCurso" th:replace="~{cursosAdm/fragmentos :: modificarCurso}"/>
+        <div id = "contenidoTotal">
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <nav th:replace="~{layout/plantilla :: navEstudiante}"/>
+        <aside th:replace="~{estudiante/fragmentos :: asideCatalogo}"/>
+        <section th:replace="~{estudiante/fragmentos :: catalogo}"/>
         </div>
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>

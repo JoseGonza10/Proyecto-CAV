@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang ="en" xmlns:th="http://www.thymeleaf.org"
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
         <title>Inicio</title>
@@ -7,7 +7,7 @@
     <body>
         <div id = cuerpo>
             <header th:replace="~{layout/plantilla :: header}"/>
-            <nav th:replace="~{layout/plantillaAdmin :: navAdmin}"/>
+            <nav th:replace="~{layout/plantilla :: navAdmin}"/>
             <aside th:replace="~{cursosAdm/fragmentos :: asideCurso}"/>
             <section th:replace="~{cursosAdm/fragmentos :: listadoCursos}"/>
         </div>

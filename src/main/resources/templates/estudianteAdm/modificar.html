@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
         <title>Inicio</title>
@@ -7,15 +7,9 @@
     <body>
         <div id = "cuerpo">
             <header th:replace="~{layout/plantilla :: header}"/>
-            <nav>
-                <ul id = "listaNav">
-                    <li>
-                        <a th:href="@{/estudianteAdm/listado}"><input type="button" value="Regresar" class="button"></a>
-                    </li>
-                </ul>
-            </nav>         
+            <nav th:replace="~{estudianteAdm/fragmentos :: navEditor}"/>    
             <section id="nuevoAlumno" th:replace="~{estudianteAdm/fragmentos :: modificarAlumno}"/>
         </div>
-        <footer th:replace="layout/plantilla :: footer"/>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
