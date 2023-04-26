@@ -10,16 +10,16 @@
         <aside th:fragment="asideIngenieria" style="height:1000px">
             <ul id = "listaAside">
                 <li>
-                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                    <a th:href="@{areaIngenierias}" class="textLink"><p th:text="#{index.aIngenierias}">Area de ingenierias</p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                    <a th:href="@{areaSalud}" class="textLink"><p th:text="#{index.aSalud}">Area de salud </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                    <a th:href="@{areaSocial}" class="textLink"><p th:text="#{index.aSocial}">Area social </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                    <a th:href="@{areaIt}" class="textLink"><p th:text="#{index.aIT}">Area de IT</p></a>
                 </li>
             </ul>
         </aside>
@@ -28,16 +28,16 @@
         <aside th:fragment="asideIt" style="height:1300px">
             <ul id = "listaAside">
                 <li>
-                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                    <a th:href="@{areaIngenierias}" class="textLink"><p th:text="#{index.aIngenierias}">Area de ingenierias</p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                    <a th:href="@{areaSalud}" class="textLink"><p th:text="#{index.aSalud}">Area de salud </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                    <a th:href="@{areaSocial}" class="textLink"><p th:text="#{index.aSocial}">Area social </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                    <a th:href="@{areaIt}" class="textLink"><p th:text="#{index.aIT}">Area de IT</p></a>
                 </li>
             </ul>
         </aside>
@@ -46,16 +46,16 @@
         <aside th:fragment="asideSalud" style="height:950px">
             <ul id = "listaAside">
                 <li>
-                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                    <a th:href="@{areaIngenierias}" class="textLink"><p th:text="#{index.aIngenierias}">Area de ingenierias</p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                    <a th:href="@{areaSalud}" class="textLink"><p th:text="#{index.aSalud}">Area de salud </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                    <a th:href="@{areaSocial}" class="textLink"><p th:text="#{index.aSocial}">Area social </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                    <a th:href="@{areaIt}" class="textLink"><p th:text="#{index.aIT}">Area de IT</p></a>
                 </li>
             </ul>
         </aside>
@@ -64,16 +64,16 @@
         <aside th:fragment="asideSocial" style="height:950px">
             <ul id = "listaAside">
                 <li>
-                    <p><a th:href="@{areaIngenierias}">Area de ingenierias</a></p>
+                    <a th:href="@{areaIngenierias}" class="textLink"><p th:text="#{index.aIngenierias}">Area de ingenierias</p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSalud}">Area de salud </a></p>
+                    <a th:href="@{areaSalud}" class="textLink"><p th:text="#{index.aSalud}">Area de salud </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaSocial}">Area social </a></p>
+                    <a th:href="@{areaSocial}" class="textLink"><p th:text="#{index.aSocial}">Area social </p></a>
                 </li>
                 <li>
-                    <p><a th:href="@{areaIt}">Area de IT</a></p>
+                    <a th:href="@{areaIt}" class="textLink"><p th:text="#{index.aIT}">Area de IT</p></a>
                 </li>
             </ul>
         </aside>
@@ -165,34 +165,34 @@
                                         </div>
                                         </div>
                                         </section>
-        
-        <section th:fragment="sectionSocial">
-                <div class = "contenedorSeccionS">
-                    <h2>Area Social </h2>
-                    <p><strong>Antropología:</strong> Como antropologo se estudia la diversidad y las particularidades de las 
-                        culturas humanas. Se analiza el problema de la diferencia y la diversidad cultural, 
-                        por eso se estudian los procesos de encuentro e interaccion social.</p>
-                    <div >
-                        <img src="https://www.nosequeestudiar.net/site/assets/files/1395/antropologos-investigando.400x300.jpg" class = "imagenesGenericas" >
-                    </div>
 
-                    <p><strong>Sociología:</strong>Estudiaras las relaciones entre personas y grupos sociales, asi como la dinamica y estructura de las sociedades,
-                        los procesos de cambio en la vida cotidiana y las instituciones.</p>           
-                    <div>
+                                        <section th:fragment="sectionSocial">
+                                            <div class = "contenedorSeccionS">
+                                                <h2>Area Social </h2>
+                                                <p><strong>Antropología:</strong> Como antropologo se estudia la diversidad y las particularidades de las 
+                                                    culturas humanas. Se analiza el problema de la diferencia y la diversidad cultural, 
+                                                    por eso se estudian los procesos de encuentro e interaccion social.</p>
+                                                <div >
+                                                    <img src="https://www.nosequeestudiar.net/site/assets/files/1395/antropologos-investigando.400x300.jpg" class = "imagenesGenericas" >
+                                                </div>
+
+                                                <p><strong>Sociología:</strong>Estudiaras las relaciones entre personas y grupos sociales, asi como la dinamica y estructura de las sociedades,
+                                                    los procesos de cambio en la vida cotidiana y las instituciones.</p>           
+                                                <div>
 
 
-                        <img src="https://estaestucarrera.com/wp-content/uploads/2021/06/7-31-e1625046011742.jpg"   class = "imagenesGenericas" >
-                    </div>
+                                                    <img src="https://estaestucarrera.com/wp-content/uploads/2021/06/7-31-e1625046011742.jpg"   class = "imagenesGenericas" >
+                                                </div>
 
-                    <p><strong>Economía:</strong> Se estudian los procesos de produccion, distribucion, comercializacion y 
-                        consumo de bienes y servicios en sociedades. Se analiza el funcionamiento de los mercados 
-                        y como interactuan los individuos y la sociedad en conjunto.</p>
-                    <div>
+                                                <p><strong>Economía:</strong> Se estudian los procesos de produccion, distribucion, comercializacion y 
+                                                    consumo de bienes y servicios en sociedades. Se analiza el funcionamiento de los mercados 
+                                                    y como interactuan los individuos y la sociedad en conjunto.</p>
+                                                <div>
 
-                        <img src="https://cdn.ufidelitas.ac.cr/wp-content/uploads/2021/10/07081919/126102425_l.jpg" class = "imagenesGenericas" >
-                    </div>
-                </div>
-            </section>
+                                                    <img src="https://cdn.ufidelitas.ac.cr/wp-content/uploads/2021/10/07081919/126102425_l.jpg" class = "imagenesGenericas" >
+                                                </div>
+                                            </div>
+                                        </section>
 
                                         </body>
                                         </html>

@@ -12,7 +12,7 @@
                     <p><a th:href="@{/estudianteAdm/nuevo}">Mis cursos</a></p>
                 </li>
                 <li>
-                    <p><a th:href="@{/estudiante/bienvenidoEstudiante}">Regresar</p></a>
+                    <p><a th:href="@{/estudiante/bienvenidoEstudiante}">Regresar</a></p>
                 </li>
             </ul>
         </aside>
@@ -47,5 +47,26 @@
             </div>
         </section>
         
+        <!--Aside bienvenido estudiante-->
+        <aside th:fragment="asideBienvenidoEst">
+                <ul id = "listaAside">
+                    <li>
+                        <p><a>Mis cursos</a></p>
+                    </li>
+                    <li>
+                        <p><a>Mi cuenta</a></p>
+                    </li>
+                    <li>
+                        <p><a th:href="@{/estudiante/catalogo}">Catalogo</a></p>
+                    </li>
+                </ul>
+            </aside>
+        
+        <!--Imagen de bienvenida-->
+        <section th:fragment="sectionBienvenidoEst">
+                <h1>Bienvenido!</h1>
+                <img src="https://cdn-icons-png.flaticon.com/512/257/257651.png"width="600" height="600">
+
+            </section>
     </body>
 </html>

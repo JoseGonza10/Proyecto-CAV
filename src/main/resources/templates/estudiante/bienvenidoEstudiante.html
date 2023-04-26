@@ -1,49 +1,16 @@
-<html lang ="en" xmlns:th="http://www.thymeleaf.org"
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <head>
-            <title>Inicio</title>
-            <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <link href="" th:href="@{/css/estilos.css}" rel="stylesheet"/>
-                    <link style="stylesheet" href="https://kit.fontawesome.com/b2b1834288.js">
-                        </head>
-                        <body>
-                            <div id = cuerpo>
-                                <header>
-                                    <h1>CAV</h1>
-                                </header>
-                                <nav>
-                                    <ul id = "listaNav">
-                                        <li>
-                                            <a th:href="@{/bienvenidoEstudiante}"><input type="button" value="Inicio" class="button"></a>
-                                        </li>
-                                        <li>
-                                            <a th:href="@{/index}"><input type="button" value="Cerrar sesión" class="button"></a></input>
-                                        </li>
-                                                </ul>
-                                                </nav> 
-                                                <aside>
-                                                    <ul id = "listaAside">
-                                                        <li>
-                                                            <p><a>Mis cursos</a></p>
-                                                        </li>
-                                                        <li>
-                                                            <p><a>Mi cuenta</a></p>
-                                                        </li>
-                                                        <li>
-                                                            <p><a th:href="@{/estudiante/catalogo}">Catalogo</a></p>
-                                                        </li>
-                                                    </ul>
-                                                </aside>
-                                                <section>
-                                                    <h1>Bienvenido!</h1>
-                                                    <img src="https://cdn-icons-png.flaticon.com/512/257/257651.png"width="600" height="600">
-
-                                                </section>
-
-                                                </div>
-                                                <footer>
-                                                </footer>
-                                                </body>
-                                                </html>
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <div id = contenidoTotal>
+            <header th:replace="~{layout/plantilla :: header}"/>
+            <nav th:replace="~{layout/plantilla :: navEstudiante}"/>
+            <aside th:replace="~{estudiante/fragmentos :: asideBienvenidoEst}"/>
+            <section th:replace="~{estudiante/fragmentos :: sectionBienvenidoEst}"/>
+        </div>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>

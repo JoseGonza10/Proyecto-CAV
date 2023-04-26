@@ -137,12 +137,13 @@ footer p{
 .tablaCrud tbody tr{
     background-color: #094956;
     color: white;
+    
 }
 
 .tablaCrud tbody tr td{
     height:30px;
-    padding-right:50px;
-    padding-left:50px;
+    padding-right:15px;
+    padding-left:15px;
 }
 
 .opcionTablaEditar{
